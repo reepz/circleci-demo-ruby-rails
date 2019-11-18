@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "welcome/index.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'renders h1 tag with Viara text' do
+    assert_select "<h1>", :text => "Viara".to_s, :count => 1
+  end
 end
